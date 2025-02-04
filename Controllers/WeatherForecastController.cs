@@ -19,7 +19,7 @@ namespace Estudos_AspNetCoreBasics.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet(Name = "GWeatherForecast")]
         public IActionResult Get()
         {
             return Ok( Enumerable.Range(1, 5).Select(index => new WeatherForecast
