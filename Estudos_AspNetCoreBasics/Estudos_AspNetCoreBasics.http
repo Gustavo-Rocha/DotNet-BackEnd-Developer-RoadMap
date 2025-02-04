@@ -1,0 +1,6 @@
+@Estudos_AspNetCoreBasics_HostAddress = http://localhost:5096
+
+GET {{Estudos_AspNetCoreBasics_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
