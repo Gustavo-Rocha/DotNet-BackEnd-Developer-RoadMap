@@ -12,14 +12,17 @@ internal class Program
         var node = new Node(20);
         var arvore = new ArvoreBinaria();
 
-        int[] valores = { 50, 30, 70, 20, 40, 60, 80 };
+        int[] valores = { 50, 40,30,35, 20, 70, 20, 40, 60, 80, 83, 85, 84, 82,86 };
 
         foreach (var valor in valores)
             arvore.Inserir(valor);
 
         arvore.EmOrdem(arvore.Raiz);
         Console.WriteLine();
-        Console.WriteLine($"Valor retornado da Arvore Binaria {arvore.BuscaArvoreBinaria(arvore.Raiz, 10)}"); 
+        Console.WriteLine($"Valor retornado da Arvore Binaria {arvore.BuscaArvoreBinaria(arvore.Raiz, 10)}");
+
+
+        arvore.Remover(83);
 
     }
 
@@ -64,7 +67,8 @@ class ArvoreBinaria
         else
         {
             if (no.Valor == valor)
-                return valor;
+                return no.Valor;
+
             else if (valor < no.Valor)
             {
                 return BuscaArvoreBinaria(no.Esquerda, valor);
@@ -77,18 +81,23 @@ class ArvoreBinaria
         return null;
     }
 
-    public Node Remover(Node Raiz, int valor)
+    public void Remover(int valor)
+    {
+        Raiz = RemoverRecursivo(Raiz, valor);
+    }   
+
+    public Node RemoverRecursivo(Node Raiz, int valor)
     {
         if(Raiz == null)
             return null;
         
         else if (valor < Raiz.Valor)
         {
-            Raiz.Esquerda = Remover(Raiz.Esquerda, valor);
+            Raiz.Esquerda = RemoverRecursivo(Raiz.Esquerda, valor);
         }
         else if (valor > Raiz.Valor)
         {
-            Raiz.Direita = Remover(Raiz.Direita, valor);
+            Raiz.Direita = RemoverRecursivo(Raiz.Direita, valor);
         }
         else if (Raiz.Valor == valor)
         {
@@ -102,7 +111,7 @@ class ArvoreBinaria
 
             var menorValor = MenorValor(Raiz.Direita);
             Raiz.Valor = menorValor.Valor;
-            Raiz.Direita = Remover(Raiz.Direita, menorValor.Valor);
+            Raiz.Direita = RemoverRecursivo(Raiz.Direita, menorValor.Valor);
         }
         return Raiz;
     }
