@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Busca_Linear", "Busca_Linea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvore_Binaria_Busca", "Arvore_Binaria_Busca\Arvore_Binaria_Busca.csproj", "{BCDE3C78-5F50-4FA6-AF7A-9B941837ECB3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KNN", "KNN\KNN.csproj", "{F2E180FB-D4C8-4609-8EDF-8C816BA599A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{BCDE3C78-5F50-4FA6-AF7A-9B941837ECB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCDE3C78-5F50-4FA6-AF7A-9B941837ECB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCDE3C78-5F50-4FA6-AF7A-9B941837ECB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2E180FB-D4C8-4609-8EDF-8C816BA599A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2E180FB-D4C8-4609-8EDF-8C816BA599A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2E180FB-D4C8-4609-8EDF-8C816BA599A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2E180FB-D4C8-4609-8EDF-8C816BA599A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
