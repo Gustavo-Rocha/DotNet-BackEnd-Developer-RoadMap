@@ -7,14 +7,14 @@ internal class Program
         var knn = new K_NN(5);
 
         // Treinamento
-        knn.Train(1.0 ,"A");
-        knn.Train(2.0, "A");
-        knn.Train(3.0, "B");
-        knn.Train(5.0, "B");
-        knn.Train(6.0, "B");
+        knn.TreinoDoAlgoritomo(1.0 ,"A");
+        knn.TreinoDoAlgoritomo(2.0, "A");
+        knn.TreinoDoAlgoritomo(3.0, "B");
+        knn.TreinoDoAlgoritomo(5.0, "B");
+        knn.TreinoDoAlgoritomo(6.0, "B");
 
         // Predição de uma nova amostra
-        string result = knn.Predict(2.5);
+        string result = knn.Previsao(2.5);
 
         Console.WriteLine($"Classe prevista: {result}");
     }
@@ -30,15 +30,15 @@ class K_NN
         this.data = new List<(double, string)>();
     }
 
-    public void Train(double features, string label)
+    public void TreinoDoAlgoritomo(double features, string label)
     {
         data.Add((features, label));
     }
 
-    public string Predict(double newPoint)
+    public string Previsao(double newPoint)
     {
         var distances = data.Select(entry =>
-            (Distance(entry.Item1, newPoint), entry.Item2))
+            (Distancia(entry.Item1, newPoint), entry.Item2))
             .OrderBy(entry => entry.Item1)
             .Take(k);
 
@@ -47,7 +47,7 @@ class K_NN
                         .First().Key;
     }
 
-    private double Distance(double vizinhos, double novaAmostragem)
+    private double Distancia(double vizinhos, double novaAmostragem)
     {
         var somadasDIferencas = Math.Pow((vizinhos - novaAmostragem), 2);
         return Math.Sqrt(somadasDIferencas);
