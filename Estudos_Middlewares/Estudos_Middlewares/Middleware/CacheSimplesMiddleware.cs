@@ -33,7 +33,7 @@ namespace Estudos_Middlewares.Middleware
                 await context.Response.WriteAsync(JsonSerializer.Serialize<List<WeatherForecast>>(cachedResponse).ToString());
                 return;
             }
-            // Captura a resposta antes de enviá-la
+            
             var originalBodyStream = context.Response.Body;
             using var memoryStream = new MemoryStream();
             context.Response.Body = memoryStream;
@@ -45,7 +45,6 @@ namespace Estudos_Middlewares.Middleware
 
             _cache[cacheKey] = JsonSerializer.Deserialize<List<WeatherForecast>>( responseBody);
 
-            // Retorna a resposta original
             memoryStream.Seek(0, SeekOrigin.Begin);
             await memoryStream.CopyToAsync(originalBodyStream);
 
