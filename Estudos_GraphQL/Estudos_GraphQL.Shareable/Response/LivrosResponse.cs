@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 
 namespace Estudos_GraphQL.Shareable.Response
 {
-    public record class LivrosResponse(List<LivroDto> Livro);
+    public record class LivrosResponse(List<Dtos.LivroDto> Livro);
     
 }

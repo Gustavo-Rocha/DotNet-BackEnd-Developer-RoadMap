@@ -9,7 +9,7 @@ namespace Estudos_GraphQL.Infra.GraphQlQueries
         {
 
         }
-        public List<LivroDto> QueryBuscaTodosLivros([Service] ILivroRepository livroRepository)
+        public List<Shareable.Dtos.LivroDto> QueryBuscaTodosLivros([Service] ILivroRepository livroRepository)
             => livroRepository.BuscaLivros();
     }
 }

@@ -1,0 +1,26 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Estudos_GraphQL.Domain";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+message LivroDto {
+  string titulo = 1;
+  string autor = 2;
+  google.protobuf.Timestamp anoPublicacao = 3; // Usamos string para simplificar DateTime
+}
+
+// The greeting service definition.
+message LivroRequest {
+  LivroDto livro = 1;
+}
+
+message LivroResponse {
+  repeated LivroDto livros = 1;
+}
+
+service LivroService {
+  rpc AdicionarLivro (LivroRequest) returns (google.protobuf.Empty);
+  rpc ListarLivros (google.protobuf.Empty) returns (LivroResponse);
+}

@@ -1,20 +1,12 @@
-﻿using Estudos_GraphQL.Shareable.Dtos;
-using Estudos_GraphQL.Shareable.Response;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Estudos_GraphQL.Domain.Repositorios;
+﻿namespace Estudos_GraphQL.Domain.Repositorios;
 
 public interface ILivroRepository
 {
-    List<LivroDto> BuscaLivros();
+    List<Shareable.Dtos.LivroDto> BuscaLivros();
 
-    void CadastraLivro(LivroDto livro);
+    void CadastraLivro(Shareable.Dtos.LivroDto livro);
 
-    LivroDto? BuscaLivroPorTitulo(string titulo);
+    Shareable.Dtos.LivroDto? BuscaLivroPorTitulo(string titulo);
 
-    void AtualizaLivro(LivroDto livro);
+    void AtualizaLivro(Shareable.Dtos.LivroDto livro);
 }
