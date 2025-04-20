@@ -1,4 +1,5 @@
 ﻿using Estudos_GraphQL.Extensions;
+using Estudos_GraphQL.Shareable.Dtos;
 using Estudos_GraphQL.Shareable.Request;
 using Estudos_GraphQL.Shareable.Response;
 using MediatR;
@@ -28,7 +29,7 @@ namespace Estudos_GraphQL
         private static async Task<IResult> ListaLivros(IMediator mediator)
                 => await mediator.SendCommand(new ListaLivroRequest());
 
-        private static async Task<IResult> CadastraLivro(IMediator mediator, [FromBody] LivroRequestBody livroRequestBody)
+        private static async Task<IResult> CadastraLivro(IMediator mediator, [FromBody] LivroDto livroRequestBody)
                 => await mediator.SendCommand(new CadastraLivroRequest(livroRequestBody));
     }
 }

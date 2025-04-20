@@ -20,6 +20,23 @@ public class LivroGrpcService : ILivroGrpcService
         _livroServiceClient = livroServiceClient;
     }
 
+    public async Task<Result> AdicionarLivros(Shareable.Dtos.LivroDto livro)
+    {
+        var request = new LivroRequest
+        {
+            Livro = new LivroDto
+            {
+                Titulo = livro.Titulo,
+                Autor = livro.Autor,
+                AnoPublicacao = Timestamp.FromDateTime(livro.AnoPublicacao)
+            }
+        };
+
+        var response = await _livroServiceClient.AdicionarLivroAsync(request);
+
+        return Result.Success();
+    }
+
     public async Task<OperationResult.Result<List<Shareable.Dtos.LivroDto>>> ListarLivros()
     {
 
