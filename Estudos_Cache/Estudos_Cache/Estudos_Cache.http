@@ -1,0 +1,10 @@
+@Estudos_Cache_HostAddress = http://localhost:5095
+
+GET {{Estudos_Cache_HostAddress}}/TesteCaches/GetLivros-MemoryCache
+Accept: application/json
+###
+
+GET {{Estudos_Cache_HostAddress}}/TesteCaches/GetLivros-DistributedCache
+Accept: application/json
+
+###
