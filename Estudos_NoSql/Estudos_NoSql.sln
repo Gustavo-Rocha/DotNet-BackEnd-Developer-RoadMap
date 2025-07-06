@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudos_NoSql", "Estudos_NoSql\Estudos_NoSql.csproj", "{AA2E03BA-2953-4CCD-9FDC-F7872FF86BE7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Api", "1 - Api", "{B18F450D-5C44-436C-A406-B2BC7A61C288}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{343CDF32-5BF0-4192-BD8A-EF2887294EB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure", "3 - Infrastructure", "{A37BB769-4EEE-4552-B40B-DBD2B534DEB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Shareable", "4 - Shareable", "{6F081067-0F44-433D-AEFE-72424F0B1187}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudos_NoSql.Domain", "Estudos_NoSql.Domain\Estudos_NoSql.Domain.csproj", "{543CFAB7-C306-48F6-92C1-646F54B5F0A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudos_NoSql.Infrastructure", "Estudos_NoSql.Infrastructure\Estudos_NoSql.Infrastructure.csproj", "{65173F71-C6A1-44A2-9E8F-84564B85ABC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudos_NoSql.IOC", "Estudos_NoSql.IOC\Estudos_NoSql.IOC.csproj", "{4324EABE-783B-49ED-8C1E-072BCF6C3322}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudos_NoSql.Shareable", "Estudos_NoSql.Shareable\Estudos_NoSql.Shareable.csproj", "{226FE760-12A3-4047-B641-136FFC2B18DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA2E03BA-2953-4CCD-9FDC-F7872FF86BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA2E03BA-2953-4CCD-9FDC-F7872FF86BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA2E03BA-2953-4CCD-9FDC-F7872FF86BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA2E03BA-2953-4CCD-9FDC-F7872FF86BE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{543CFAB7-C306-48F6-92C1-646F54B5F0A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{543CFAB7-C306-48F6-92C1-646F54B5F0A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{543CFAB7-C306-48F6-92C1-646F54B5F0A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{543CFAB7-C306-48F6-92C1-646F54B5F0A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65173F71-C6A1-44A2-9E8F-84564B85ABC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65173F71-C6A1-44A2-9E8F-84564B85ABC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65173F71-C6A1-44A2-9E8F-84564B85ABC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65173F71-C6A1-44A2-9E8F-84564B85ABC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4324EABE-783B-49ED-8C1E-072BCF6C3322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4324EABE-783B-49ED-8C1E-072BCF6C3322}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4324EABE-783B-49ED-8C1E-072BCF6C3322}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4324EABE-783B-49ED-8C1E-072BCF6C3322}.Release|Any CPU.Build.0 = Release|Any CPU
+		{226FE760-12A3-4047-B641-136FFC2B18DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{226FE760-12A3-4047-B641-136FFC2B18DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{226FE760-12A3-4047-B641-136FFC2B18DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{226FE760-12A3-4047-B641-136FFC2B18DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AA2E03BA-2953-4CCD-9FDC-F7872FF86BE7} = {B18F450D-5C44-436C-A406-B2BC7A61C288}
+		{543CFAB7-C306-48F6-92C1-646F54B5F0A5} = {343CDF32-5BF0-4192-BD8A-EF2887294EB9}
+		{65173F71-C6A1-44A2-9E8F-84564B85ABC7} = {A37BB769-4EEE-4552-B40B-DBD2B534DEB8}
+		{4324EABE-783B-49ED-8C1E-072BCF6C3322} = {6F081067-0F44-433D-AEFE-72424F0B1187}
+		{226FE760-12A3-4047-B641-136FFC2B18DF} = {6F081067-0F44-433D-AEFE-72424F0B1187}
+	EndGlobalSection
+EndGlobal

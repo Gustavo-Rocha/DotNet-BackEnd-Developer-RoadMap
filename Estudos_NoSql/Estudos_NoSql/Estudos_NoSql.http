@@ -1,0 +1,11 @@
+@Estudos_NoSql_HostAddress = http://localhost:5263
+
+GET {{Estudos_NoSql_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+Post {{Estudos_NoSql_HostAddress}}/api/v1/cadastraCliente
+Accept: application/json
+
+###

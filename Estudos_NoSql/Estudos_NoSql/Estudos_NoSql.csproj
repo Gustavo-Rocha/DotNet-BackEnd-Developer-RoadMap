@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>1285a452-7aab-4e93-a7ba-38009cb22e93</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Divino.OperationResult" Version="4.0.1" />
+    <PackageReference Include="MediatR" Version="12.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="NovaPasta\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Estudos_NoSql.IOC\Estudos_NoSql.IOC.csproj" />
+    <ProjectReference Include="..\Estudos_NoSql.Shareable\Estudos_NoSql.Shareable.csproj" />
+  </ItemGroup>
+
+</Project>

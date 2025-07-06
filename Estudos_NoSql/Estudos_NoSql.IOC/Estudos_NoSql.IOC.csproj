@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.MongoDb" Version="9.0.0" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="9.0.0" />
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
+    <PackageReference Include="Divino.OperationResult" Version="4.0.1" />
+    <PackageReference Include="MediatR" Version="12.5.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.6" />
+	<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="9.0.0" />
+	<PackageReference Include="MongoDB.Driver" Version="3.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Estudos_NoSql.Domain\Estudos_NoSql.Domain.csproj" />
+    <ProjectReference Include="..\Estudos_NoSql.Infrastructure\Estudos_NoSql.Infrastructure.csproj" />
+    <ProjectReference Include="..\Estudos_NoSql.Shareable\Estudos_NoSql.Shareable.csproj" />
+  </ItemGroup>
+
+</Project>
