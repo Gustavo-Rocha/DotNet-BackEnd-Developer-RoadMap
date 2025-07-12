@@ -14,5 +14,11 @@ namespace Estudos_NoSql.Domain.Repositories
         Task<Result> CadastraCliente(ClienteEntity cliente);
 
         Task<Result<List<ClienteEntity>>> ListaCliente(FiltroClientes FiltroCliente);
+
+        Task<Result> AtualizaCliente(ClienteEntity cliente);
+
+        Task<Result> DeletaCliente(string idCliente);
+
+        Task<Result<List<ClienteEntity>>> GeraRelatoriosCliente(FiltroClientes FiltroCliente);
     }
 }

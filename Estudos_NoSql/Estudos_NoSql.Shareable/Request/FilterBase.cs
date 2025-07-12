@@ -8,9 +8,8 @@ namespace Estudos_NoSql.Shareable.Request
 {
     public abstract class FilterBase
     {
-        public int QuantidadeItensPorPagina { get; set; } = default!;
+        public int? QuantidadeItensPorPagina { get; set; } = default!;
 
-        public int Pagina { get; set; } = default!;
-
+        public int? Pagina { get; set; } = default!;
     }
 }

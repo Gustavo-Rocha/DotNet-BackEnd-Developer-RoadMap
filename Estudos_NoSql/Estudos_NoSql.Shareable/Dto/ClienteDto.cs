@@ -8,6 +8,8 @@ namespace Estudos_NoSql.Shareable.Dto
 {
     public class ClienteDto
     {
+        public string? Id { get; set; } = default!;
+
         public string Nome { get; set; } = default!;
 
         public string Cpf { get; set; } = default!;

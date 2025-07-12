@@ -10,23 +10,23 @@ using System.Collections.Generic;
 
 namespace Estudos_NoSql.Domain.Handles;
 
-public class ListaClientesRequestHandler : IRequestHandler<ListaClienteRequest, Result<ListaClienteResponse>>
+public class RelatoriosClienteRequestHandler : IRequestHandler<RelatoriosClienteRequest, Result<ListaClienteResponse>>
 {
     private readonly IClienteRepository _clienteRepository;
     private readonly IMapper _autoMapper;
 
-    public ListaClientesRequestHandler(IClienteRepository clienteService, IMapper autoMapper)
+    public RelatoriosClienteRequestHandler(IClienteRepository clienteService, IMapper autoMapper)
     {
         _clienteRepository = clienteService;
         _autoMapper = autoMapper;
     }
 
-    public async Task<Result<ListaClienteResponse>> Handle(ListaClienteRequest request, CancellationToken cancellationToken)
+    public async Task<Result<ListaClienteResponse>> Handle(RelatoriosClienteRequest request, CancellationToken cancellationToken)
     {
         if (request is null)
             return new ApplicationException("cliente Nulo");
 
-        var (sucesso, ListaDeCLientes, erro) = await _clienteRepository.ListaCliente(request.Filtro);
+        var (sucesso, ListaDeCLientes, erro) = await _clienteRepository.GeraRelatoriosCliente(request.Filtro);
 
         return Result.Success(MontaResponse(ListaDeCLientes));
     }

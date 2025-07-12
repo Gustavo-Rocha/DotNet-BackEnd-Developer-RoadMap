@@ -4,6 +4,7 @@ using Estudos_NoSql.Domain.Repositories;
 using Estudos_NoSql.Shareable.Request;
 using MediatR;
 using OperationResult;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 using ApplicationException = System.ApplicationException;
 
 
@@ -38,8 +39,10 @@ public class CadastraClienteRequestHandler : IRequestHandler<ClienteRequest, Res
             UF = request.ClienteRequestBody.UF,
             DiasAluguelFilme = DateTime.Now
         };
-        var sucesso = await _clienteRepository.CadastraCliente(clienteDto);
+        var (sucesso, erro) = await _clienteRepository.CadastraCliente(clienteDto);
 
-        return Result.Success();
+        return sucesso is true && erro is null
+               ? Result.Success()
+               : new ApplicationException("erro ao Cadastrar Cliente");
     }
 }
