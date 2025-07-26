@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Estudos_Teste_RabbitMQ_Worker_Consumo": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
