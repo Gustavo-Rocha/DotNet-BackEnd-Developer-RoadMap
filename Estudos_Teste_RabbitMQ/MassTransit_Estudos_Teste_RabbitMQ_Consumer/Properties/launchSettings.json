@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MassTransit_Estudos_Teste_RabbitMQ_Consumer": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
