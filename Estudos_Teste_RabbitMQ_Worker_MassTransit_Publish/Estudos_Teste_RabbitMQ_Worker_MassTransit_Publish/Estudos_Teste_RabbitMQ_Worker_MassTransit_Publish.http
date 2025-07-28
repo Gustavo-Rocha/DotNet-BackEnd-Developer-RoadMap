@@ -1,0 +1,11 @@
+@Estudos_Teste_RabbitMQ_Worker_MassTransit_Publish_HostAddress = http://localhost:5019
+
+GET {{Estudos_Teste_RabbitMQ_Worker_MassTransit_Publish_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{Estudos_Teste_RabbitMQ_Worker_MassTransit_Publish_HostAddress}}/cadastraClienteRabbit/
+Accept: application/json
+
+###
